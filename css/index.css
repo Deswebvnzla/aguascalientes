@@ -1,0 +1,36 @@
+#contenedor-principal{
+    position: absolute;
+    background: url(/img/fondo.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#test{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+#test .seccion{
+    height: 100%;
+}
+.panel{
+    height: 100%;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.79);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.clear{
+    clear: both;
+}
+#panel1{
+    padding-left: 0;
+    padding-right: 0;
+}
