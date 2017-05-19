@@ -1,6 +1,14 @@
+@font-face {
+    font-family: DINCondensedBold;
+    src: url(/font/DIN Condensed Bold.ttf);
+}
+*{
+    font-family: DINCondensedBold;
+}
 #contenedor-principal{
     position: absolute;
-    background: url(/img/fondo.jpg) no-repeat;
+    background: black url(/img/fondo.png) no-repeat;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     top: 0;
@@ -23,7 +31,8 @@
 .panel{
     height: 100%;
     margin-bottom: 0;
-    background: rgba(255, 255, 255, 0.79);
+    /*background: rgba(217, 217, 217, 0.79);*/
+    background: rgba(217, 217, 217, 0);
     padding-top: 20px;
     padding-bottom: 10px;
 }
@@ -33,4 +42,38 @@
 #panel1{
     padding-left: 0;
     padding-right: 0;
+}
+#logo{
+    margin-bottom: 60px;
+}
+.icono{
+    padding: 4px 10px;
+    box-shadow: 0 5px 10px 1px #909090;
+    height: 45px;
+    width: 50px;
+    margin-right: 10px;
+
+    background: #a8a8a8;
+}
+.icono:hover{
+    cursor: pointer;
+    background: rgba(217, 217, 217, 0.79);
+}
+.item{
+    margin-bottom: 30px;
+}
+.item span{
+    font-weight: bold;
+}
+#icono-ubicacion{
+    padding: 3px 15px;
+}
+#icono-planos{
+    padding: 10px 7px;
+}
+#panel3{
+    padding: 0;
+}
+#seccion-panel3{
+    padding: 0;
 }
