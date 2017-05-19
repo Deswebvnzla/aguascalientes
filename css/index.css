@@ -74,6 +74,9 @@
 #panel3{
     padding: 0;
 }
+#panel3 img{
+    height: 100%;
+}
 #seccion-panel3{
     padding: 0;
 }
