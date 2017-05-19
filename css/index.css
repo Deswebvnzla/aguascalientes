@@ -39,30 +39,41 @@
 .clear{
     clear: both;
 }
-#panel1{
+#seccion_panel1{
     padding-left: 0;
-    padding-right: 0;
+}
+#panel1.active{
+    background: rgba(217, 217, 217, 0.79);
+}
+#panel2.active{
+    background: rgba(217, 217, 217, 0.79);
+}
+#panel3.active{
+    background: rgba(217, 217, 217, 0.79);
 }
 #logo{
     margin-bottom: 60px;
 }
 .icono{
     padding: 4px 10px;
-    box-shadow: 0 5px 10px 1px #909090;
+    box-shadow: 0 5px 20px 1px #404040;
     height: 45px;
     width: 50px;
     margin-right: 10px;
-
     background: #a8a8a8;
 }
 .icono:hover{
     cursor: pointer;
     background: rgba(217, 217, 217, 0.79);
 }
+.item .active{
+    background: rgba(217, 217, 217, 0.79);
+}
 .item{
     margin-bottom: 30px;
 }
 .item span{
+    color: black;
     font-weight: bold;
 }
 #icono-ubicacion{
@@ -78,5 +89,6 @@
     height: 100%;
 }
 #seccion-panel3{
+    margin-top: -3px;
     padding: 0;
 }
