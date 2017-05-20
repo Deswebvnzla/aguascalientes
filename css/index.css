@@ -6,7 +6,7 @@
     font-family: DINCondensedBold;
 }
 html {
-     height: 100%;
+    height: 100%;
 }
 body{
     background: black url(/img/fondo.png) no-repeat center center fixed;
@@ -96,4 +96,22 @@ body{
 }
 #seccion_ubicacion2_mapa span{
     vertical-align: bottom;
+
+}
+.imagenes {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    float: left;
+    width: 65px;
+}
+
+.imagenes:hover {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    float: left;
+    width: 75px;
+    cursor: pointer;
+
 }

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+  
+    jQuery(document).ready(function(){
+  $(".oculto").hide();              
+    $(".inf").hover(function(){
+          var nodo = $(this).attr("href");  
+ 
+          if ($(nodo).is(":visible")){
+               $(nodo).hide();
+               return false;
+          }else{
+        $(".oculto").hide("slow");                             
+        $(nodo).fadeToggle("fast");
+        return false;
+          }
+    });
+}); 
+</script>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-xs well">
+      <a href="#info1" class="inf">Block 1</a>
+    </div>
+    <div class="col-sm-4 col-xs well">
+      <a href="#info2" class="inf">Block 2</a>
+    </div>
+    <div class="col-sm-4 col-xs well">
+    <a href="#info3" class="inf">Block 3</a>
+    </div>
+  </div>
+  <!-- contenido informacion adicional -->
+  <div class="row">
+    <div id="info1" class="col-xs-12 well oculto">
+      <p>Texto 1</p>
+    </div>
+    <div id="info2" class="col-xs-12 well oculto">
+      <p>Texto 2</p>
+    </div>
+    <div id="info3" class="col-xs-12 well oculto">
+    <p>Texto 3</p>
+    </div>
+  </div>
+</div>
