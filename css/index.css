@@ -4,6 +4,7 @@
 }
 *{
     font-family: DINCondensedBold;
+    color: black;
 }
 html {
     height: 100%;
@@ -114,4 +115,30 @@ body{
     width: 75px;
     cursor: pointer;
 
+}#seccion_planos1{
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+}
+#seccion_planos1 ul{
+    padding: 0 0px;
+}
+#seccion_planos1 li{
+    list-style: none;
+    padding: 10px 0px;
+}
+#seccion_planos1 li:hover{
+    cursor: pointer;
+    background: #898989;
+}
+#seccion_planos2{
+    height: 100%;
+    background: white;
+}
+#seccion_planos2 > div{
+    height: 100%;
+}
+#img_plano{
+    height: 100%;
+    margin: 0 auto;
 }

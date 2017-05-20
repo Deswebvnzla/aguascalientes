@@ -14,6 +14,9 @@ $(function(){
     var seccion_ubicacion1 = $("#seccion_ubicacion1");
     var seccion_ubicacion2 = $("#seccion_ubicacion2");
     var seccion_imagen_fondo = $("#seccion_imagen_fondo");
+    var seccion_planos1 = $("#seccion_planos1");
+    var seccion_planos2 = $("#seccion_planos2");
+    var planos = $("#planos li");
 
     // eventos
     icono_ubicacion.hover(function(){
@@ -25,14 +28,14 @@ $(function(){
     });
 
     icono_ubicacion.on("click",function(){
-        
+
         panel1.removeClass("active");
-        
+
         seccion_auxiliar.addClass("hidden");
         seccion_ubicacion1.addClass("hidden");
         seccion_ubicacion2.addClass("hidden");
         seccion_imagen_fondo.addClass("hidden");
-        
+
         icono_ubicacion.addClass("active");
         icono_imagenes.removeClass("active");
         icono_planos.removeClass("active");
@@ -60,8 +63,8 @@ $(function(){
 
     icono_imagenes.on("click",function(){
         panel1.removeClass("active");
-        
-        
+
+
         icono_ubicacion.removeClass("active");
         icono_imagenes.addClass("active");
         icono_planos.removeClass("active");
@@ -85,9 +88,15 @@ $(function(){
     });
 
     icono_planos.on("click",function(){
-        
+
         panel1.removeClass("active");
-        
+
+        seccion_auxiliar.addClass("hidden");
+        seccion_ubicacion1.addClass("hidden");
+        seccion_ubicacion2.addClass("hidden");
+        seccion_imagen_fondo.addClass("hidden");
+        seccion_planos1.addClass("hidden");
+
         icono_ubicacion.removeClass("active");
         icono_imagenes.removeClass("active");
         icono_planos.addClass("active");
@@ -97,9 +106,15 @@ $(function(){
         span_ubicacion.addClass("hidden");
 
         item_activo = "planos";
-        
+
         panel1.addClass("active");
-        
+        seccion_planos1.removeClass("hidden");
+
+    });
+
+    planos.on("click",function(){
+        console.log("click");
+        seccion_planos2.removeClass("hidden");
     });
 
     // funciones auxiliares
