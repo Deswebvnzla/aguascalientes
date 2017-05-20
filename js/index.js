@@ -10,6 +10,7 @@ $(function(){
     var panel1 = $("#panel1");
     var panel2 = $("#panel2");
     var panel3 = $("#panel3");
+    var seccion_ubicacion1 = $("#seccion_ubicacion1");
 
     // eventos
     icono_ubicacion.hover(function(){
@@ -25,6 +26,8 @@ $(function(){
         panel2.removeClass("active");
         panel3.removeClass("active");
         
+        seccion_ubicacion1.addClass("hidden");
+        
         icono_ubicacion.addClass("active");
         icono_imagenes.removeClass("active");
         icono_planos.removeClass("active");
@@ -38,6 +41,7 @@ $(function(){
         panel1.addClass("active");
         panel2.addClass("active");
         panel3.addClass("active");
+        seccion_ubicacion1.removeClass("hidden");
 
     });
 
