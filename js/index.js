@@ -12,6 +12,8 @@ $(function(){
     var panel3 = $("#panel3");
     var seccion_auxiliar = $("#seccion_auxiliar");
     var seccion_ubicacion1 = $("#seccion_ubicacion1");
+    var seccion_ubicacion2 = $("#seccion_ubicacion2");
+    var seccion_imagen_fondo = $("#seccion_imagen_fondo");
 
     // eventos
     icono_ubicacion.hover(function(){
@@ -26,8 +28,10 @@ $(function(){
         
         panel1.removeClass("active");
         
-        seccion_ubicacion1.addClass("hidden");
         seccion_auxiliar.addClass("hidden");
+        seccion_ubicacion1.addClass("hidden");
+        seccion_ubicacion2.addClass("hidden");
+        seccion_imagen_fondo.addClass("hidden");
         
         icono_ubicacion.addClass("active");
         icono_imagenes.removeClass("active");
@@ -41,6 +45,7 @@ $(function(){
 
         panel1.addClass("active");
         seccion_ubicacion1.removeClass("hidden");
+        seccion_ubicacion2.removeClass("hidden");
 
     });
 

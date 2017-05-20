@@ -5,27 +5,15 @@
 *{
     font-family: DINCondensedBold;
 }
-#contenedor-principal{
-    position: absolute;
-    background: black url(/img/fondo.png) no-repeat;
+html {
+     height: 100%;
+}
+body{
+    background: black url(/img/fondo.png) no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-#test{
-    position: relative;
-    width: 100%;
     height: 100%;
-    padding-top: 5px;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
 }
-#test .seccion{
+.seccion{
     height: 100%;
 }
 .panel{
@@ -37,9 +25,6 @@
 }
 .clear{
     clear: both;
-}
-#seccion_panel1{
-    padding-left: 0;
 }
 #panel1{
     background: rgba(217, 217, 217, 0);
@@ -80,6 +65,8 @@
 }
 #imagen_fondo{
     padding: 0;
+    height: 100%;
+    margin-bottom: 0;
 }
 #imagen_fondo img{
     height: 100%;
@@ -87,4 +74,26 @@
 #seccion_imagen_fondo{
     margin-top: -3px;
     padding: 0;
+}
+#seccion_ubicacion2{
+    background: black;
+    padding: 0px 50px;
+    color: white;
+    font-size: larger;
+}
+#seccion_ubicacion2 header{
+    margin-bottom: 20px;
+}
+#seccion_ubicacion2 footer{
+    padding-left: 100px;
+}
+#seccion_ubicacion2_mapa{
+    margin-bottom: 20px;
+}
+#seccion_ubicacion2_mapa img{
+    display: inline;
+    margin-right: 20px;
+}
+#seccion_ubicacion2_mapa span{
+    vertical-align: bottom;
 }
