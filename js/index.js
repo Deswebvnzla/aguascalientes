@@ -10,6 +10,7 @@ $(function(){
     var panel1 = $("#panel1");
     var panel2 = $("#panel2");
     var panel3 = $("#panel3");
+    var seccion_auxiliar = $("#seccion_auxiliar");
     var seccion_ubicacion1 = $("#seccion_ubicacion1");
 
     // eventos
@@ -22,11 +23,11 @@ $(function(){
     });
 
     icono_ubicacion.on("click",function(){
+        
         panel1.removeClass("active");
-        panel2.removeClass("active");
-        panel3.removeClass("active");
         
         seccion_ubicacion1.addClass("hidden");
+        seccion_auxiliar.addClass("hidden");
         
         icono_ubicacion.addClass("active");
         icono_imagenes.removeClass("active");
@@ -39,8 +40,6 @@ $(function(){
         item_activo = "ubicacion";
 
         panel1.addClass("active");
-        panel2.addClass("active");
-        panel3.addClass("active");
         seccion_ubicacion1.removeClass("hidden");
 
     });
@@ -56,8 +55,6 @@ $(function(){
 
     icono_imagenes.on("click",function(){
         panel1.removeClass("active");
-        panel2.removeClass("active");
-        panel3.removeClass("active");
         
         
         icono_ubicacion.removeClass("active");
@@ -71,8 +68,6 @@ $(function(){
         item_activo = "imagenes";
 
         panel1.addClass("active");
-        panel2.addClass("active");
-        panel3.addClass("active");
 
     });
 
@@ -87,8 +82,6 @@ $(function(){
     icono_planos.on("click",function(){
         
         panel1.removeClass("active");
-        panel2.removeClass("active");
-        panel3.removeClass("active");
         
         icono_ubicacion.removeClass("active");
         icono_imagenes.removeClass("active");
@@ -101,7 +94,6 @@ $(function(){
         item_activo = "planos";
         
         panel1.addClass("active");
-        panel2.addClass("active");
         
     });
 

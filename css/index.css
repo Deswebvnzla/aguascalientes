@@ -31,8 +31,7 @@
 .panel{
     height: 100%;
     margin-bottom: 0;
-    /*background: rgba(217, 217, 217, 0.79);*/
-    background: rgba(217, 217, 217, 0);
+    background: rgba(217, 217, 217, 0.79);
     padding-top: 20px;
     padding-bottom: 10px;
 }
@@ -42,13 +41,10 @@
 #seccion_panel1{
     padding-left: 0;
 }
+#panel1{
+    background: rgba(217, 217, 217, 0);
+}
 #panel1.active{
-    background: rgba(217, 217, 217, 0.79);
-}
-#panel2.active{
-    background: rgba(217, 217, 217, 0.79);
-}
-#panel3.active{
     background: rgba(217, 217, 217, 0.79);
 }
 .logo{
@@ -82,13 +78,13 @@
 #icono-planos{
     padding: 10px 7px;
 }
-#panel3{
+#imagen_fondo{
     padding: 0;
 }
-#panel3 img{
+#imagen_fondo img{
     height: 100%;
 }
-#seccion-panel3{
+#seccion_imagen_fondo{
     margin-top: -3px;
     padding: 0;
 }
