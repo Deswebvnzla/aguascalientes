@@ -13,6 +13,11 @@ $(function(){
     var seccion_auxiliar = $("#seccion_auxiliar");
     var seccion_ubicacion1 = $("#seccion_ubicacion1");
     var seccion_ubicacion2 = $("#seccion_ubicacion2");
+    var seccion_imagenes1 = $("#seccion_imagenes1");
+     var seccion_imagenes2 = $("#seccion_imagenes2");
+   
+
+
     var seccion_imagen_fondo = $("#seccion_imagen_fondo");
 
     // eventos
@@ -30,11 +35,11 @@ $(function(){
         
         seccion_auxiliar.addClass("hidden");
         seccion_ubicacion1.addClass("hidden");
+
         seccion_ubicacion2.addClass("hidden");
         seccion_imagen_fondo.addClass("hidden");
         
         icono_ubicacion.addClass("active");
-        icono_imagenes.removeClass("active");
         icono_planos.removeClass("active");
 
         span_imagenes.addClass("hidden");
@@ -46,6 +51,7 @@ $(function(){
         panel1.addClass("active");
         seccion_ubicacion1.removeClass("hidden");
         seccion_ubicacion2.removeClass("hidden");
+
 
     });
 
@@ -60,6 +66,11 @@ $(function(){
 
     icono_imagenes.on("click",function(){
         panel1.removeClass("active");
+
+        seccion_auxiliar.addClass("hidden");
+         seccion_imagenes1.addClass("hidden");
+         seccion_imagenes2.addClass("hidden");
+
         
         
         icono_ubicacion.removeClass("active");
@@ -73,6 +84,12 @@ $(function(){
         item_activo = "imagenes";
 
         panel1.addClass("active");
+        icono_imagenes.removeClass("active");
+        seccion_imagenes1.removeClass("hidden");
+                seccion_imagenes2.removeClass("hidden");
+
+
+
 
     });
 
@@ -102,7 +119,7 @@ $(function(){
         
     });
 
-    // funciones auxiliares
+
 
 
 });
