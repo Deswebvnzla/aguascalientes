@@ -20,52 +20,71 @@ $(function(){
     var seccion_planos1 = $("#seccion_planos1");
     var seccion_planos2 = $("#seccion_planos2");
     var planos = $("#planos li");
+    var panel1_logo = $("#panel1_logo");
+
 
     // eventos
+    span_ubicacion.hide();
+    panel1_logo.on("click",function(){
+        ocultarSecciones();
+        desactivarIconos();
+        panel1.removeClass("active");
+        seccion_auxiliar.removeClass("hidden");
+        seccion_imagen_fondo.removeClass("hidden");
+    });
+    
     icono_ubicacion.hover(function(){
-        span_ubicacion.removeClass("hidden");
+        span_ubicacion.fadeIn(200,function(){
+           
+        });
+
     },function(){
         if(item_activo != "ubicacion"){
-            span_ubicacion.addClass("hidden");
+            span_ubicacion.fadeOut(500,function(){
+                
+            });
         }
     });
 
     icono_ubicacion.on("click",function(){
         item_activo = "ubicacion";
-
         activarIconos();
         activarSecciones();
-
     });
 
-
     icono_imagenes.hover(function(){
-        span_imagenes.removeClass("hidden");
+        span_imagenes.fadeIn(200,function(){
+            span_imagenes.removeClass("hidden");
+        });
     },function(){
         if(item_activo != "imagenes"){
-            span_imagenes.addClass("hidden");
+            span_imagenes.fadeOut(500,function(){
+                span_imagenes.addClass("hidden");
+            });
         }
     });
 
     icono_imagenes.on("click",function(){
         item_activo = "imagenes";
-        
         activarIconos();
         activarSecciones();
-
     });
 
     icono_planos.hover(function(){
-        span_planos.removeClass("hidden");
+        span_planos.fadeIn(200,function(){
+            span_planos.removeClass("hidden");
+        });
     },function(){
         if(item_activo != "planos"){
-            span_planos.addClass("hidden");
+            span_planos.fadeOut(500,function(){
+                span_planos.addClass("hidden");
+            });
         }
     });
 
     icono_planos.on("click",function(){
         item_activo = "planos";
-        
+
         activarIconos();
         activarSecciones()
 
