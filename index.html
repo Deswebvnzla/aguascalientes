@@ -20,6 +20,12 @@
         <script src="js/localization/messages_es.js"></script>
         <script src="js/jquery.number.js"></script>
         <script src="js/index.js"></script>
+
+        <script type="text/javascript">
+function cambiar(cambiar_foto)
+{
+    document.getElementById('cambio').src = cambiar_foto;
+}</script>
     </head>
     <body>
         <!-- Panel 1 -->
@@ -77,26 +83,43 @@
                         <img src="/img/logo_aguascalientes47.png" alt="" class="img-responsive">
                     </div>
                     <div class="col-xs-12 col-md-12">
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png">
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png">
+
+                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/1.jpg')">
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
                     </div> 
                     <div class="col-xs-12 col-md-12">
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png">
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png">
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
+                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/2.jpg')">
                     </div>  
                     <div class="col-xs-12 col-md-12">
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png"> 
-                        <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png">
+                         <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/3.jpg')">
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
+                    </div>
+                     <div class="col-xs-12 col-md-12">                      
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
+                           <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/4.jpg')">
+                    </div>
+                     <div class="col-xs-12 col-md-12">
+                         <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/5.jpg')">
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
+                    </div>
+                          <div class="col-xs-12 col-md-12">                      
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
+                           <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/3.jpg')">
+                    </div>
+                     <div class="col-xs-12 col-md-12">
+                         <img class="imagenes" src="img/Gráficos/imagenes/botonrenders.png" style="cursor: pointer" onclick="cambiar('img/Gráficos/imagenes/2.jpg')">
+                        <img class="imagenes" src="img/Gráficos/imagenes/novaquitar.png">
                     </div>
 
                     <div class="row">
-                        <img style="width: 60px;height: 60px;" class="camara center-block" src="img/Gráficos/imagenes/botoncamaravideo.png"> 
+                        <img style="width: 60px;height: 60px;" src="img/Gráficos/imagenes/botoncamaravideo.png" class="camara center-block"> 
                     </div>
              </div>                        
         </div>
           <div class="col-xs-8 seccion_imagenes2 seccion hidden" id="seccion_imagenes2">
             <div class="container-fluid">
-             <img style="width: 100%;height: auto;" class="camara center-block" src="/img/Fachada_Ags47bn.jpg"> 
+             <img style="width: 100%;height: auto;" id="cambio" class="camara center-block" src="/img/Fachada_Ags47bn.jpg"> 
 
             </div>
         </div>
