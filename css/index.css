@@ -40,7 +40,6 @@ body{
     box-shadow: 0 5px 20px 1px #404040;
     height: 45px;
     width: 50px;
-    margin-right: 10px;
     background: #a8a8a8;
 }
 .icono:hover{
@@ -56,6 +55,7 @@ body{
 .item span{
     color: black;
     font-weight: bold;
+    margin-left: 10px;
 }
 #icono-ubicacion{
     padding: 3px 15px;
@@ -92,11 +92,9 @@ body{
     vertical-align: bottom;
 }
 .imagenes {
-    display: block;
     height: auto;
     max-width: 100%;
-    /*float: left;*/
-    width: 65px;
+    width: 70px;
 
 }
 
@@ -127,6 +125,9 @@ body{
 }
 #seccion_planos1 ul{
     padding: 0 0px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
 }
 #seccion_planos1 li{
     list-style: none;
@@ -137,13 +138,25 @@ body{
     background: #898989;
 }
 #seccion_planos2{
-    height: 100%;
     background: white;
 }
-#seccion_planos2 > div{
-    height: 100%;
+#imagenes_play{
+    width: 45px;
+    height: 45px;
 }
-#img_plano{
-    height: 100%;
+#seccion_imagenes1 .panel .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#img_plano img{
+    max-height: 600px;
     margin: 0 auto;
+}
+#img_plano figcaption{
+    text-align: center;
+    color: #4b1380;
+    font-weight: bold;
+}
+#panel1_logo:hover{
+    cursor: pointer;
 }
