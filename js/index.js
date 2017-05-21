@@ -24,7 +24,9 @@ $(function(){
 
 
     // eventos
+
     span_ubicacion.hide();
+
     panel1_logo.on("click",function(){
         ocultarSecciones();
         desactivarIconos();
@@ -35,13 +37,13 @@ $(function(){
     
     icono_ubicacion.hover(function(){
         span_ubicacion.fadeIn(200,function(){
-           
+
         });
 
     },function(){
         if(item_activo != "ubicacion"){
             span_ubicacion.fadeOut(500,function(){
-                
+
             });
         }
     });
