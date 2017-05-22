@@ -30,21 +30,16 @@ $(function(){
     var tiempo_mostrar = 2000;
     var tiempo_inicio_anim = 1000;
     var cambio = $("#cambio");  
-    var cambio1 = $("#cambio1");  
-    var cambio2 = $("#cambio2");  
-    var cambio3 = $("#cambio3");  
-    var cambio4 = $("#cambio4"); 
-    var cambio5 = $("#cambio5");  
-    cambio1.hide();
-    cambio2.hide();
-    cambio3.hide();
-    cambio4.hide();
-    cambio5.hide();
+    var slider = $("#slider");  
+      slider.hide();
+
+ 
 
     // eventos
     imagenes_play.on("click",function(){
         cambio.hide();
-        animacion();
+        slider.show();
+     
     });
 
     panel1_logo.on("click",function(){
@@ -104,52 +99,6 @@ $(function(){
     // funciones
 
 
-    function animacion() { 
-
-        // Mostramos la foto 1  
-        cambio1.fadeIn(tiempo_mostrar); 
-
-        // Cuando pasen otros 3000 milisegundos, ocultamos la foto 1 y mostramos la foto 2  
-        setTimeout(function() {  
-            // Ocultamos la foto 1  
-
-            cambio1.fadeOut(tiempo_ocultar);  
-            // Mostramos la foto 2  
-            cambio2.fadeIn(tiempo_mostrar);  
-        }, tiempo_entre_img);  
-
-        // Cuando pasen otros 3000 milisegundos, ocultamos la foto 2 y mostramos la foto 3  
-        setTimeout(function() {  
-            // Ocultamos la foto 2  
-            cambio2.fadeOut(tiempo_ocultar);  
-            // Mostramos la foto 3  
-            cambio3.fadeIn(tiempo_mostrar);  
-        }, tiempo_entre_img * 2); 
-
-        setTimeout(function() {  
-            // Ocultamos la foto 3  
-            cambio3.fadeOut(tiempo_ocultar);  
-            // Mostramos la foto 4  
-            cambio4.fadeIn(tiempo_mostrar);  
-        }, tiempo_entre_img * 3); 
-
-        setTimeout(function() {  
-            // Ocultamos la foto 4  
-            cambio4.fadeOut(tiempo_ocultar);  
-            // Mostramos la foto 5  
-            cambio5.fadeIn(tiempo_mostrar);  
-        }, tiempo_entre_img * 4);   
-
-        // Cuando pasen otros 3000 milisegundos, ocultamos la foto 3 y volvemos a iniciar la animación  
-        setTimeout(function() {  
-            // Ocultamos la foto 3  
-            cambio5.fadeOut(tiempo_ocultar);  
-            // Iniciamos otra vez la animación  
-            animacion();  
-        }, tiempo_inicio_anim); 
-
-
-    } 
 
     function ocultarSecciones(){
         seccion_auxiliar.hide();
