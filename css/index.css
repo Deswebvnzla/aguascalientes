@@ -29,7 +29,12 @@ body{
     background: rgba(217, 217, 217, 0);
 }
 #panel1.active{
+    transition: 1s;
     background: rgba(217, 217, 217, 0.79);
+}
+#panel1.ocultar{
+    transition: 0.5s;
+    background: rgba(217, 217, 217, 0);
 }
 .logo{
     margin-bottom: 60px;
@@ -56,6 +61,8 @@ body{
     color: black;
     font-weight: bold;
     margin-left: 10px;
+    text-shadow: 0 0 5px white;
+    position: absolute;
 }
 #icono-ubicacion{
     padding: 3px 15px;
@@ -92,14 +99,13 @@ body{
     vertical-align: bottom;
 }
 .imagenes {
-    height: auto;
-    max-width: 100%;
+    height: 70px;
     width: 70px;
-
+    margin: 0 auto;
+    display: block;
 }
 
 .imagenes:hover {
-    display: block;
     cursor: pointer;
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -148,8 +154,10 @@ body{
     margin-right: 0px;
     margin-left: 0px;
 }
+#img_plano{
+    margin: 0;
+}
 #img_plano img{
-    max-height: 600px;
     margin: 0 auto;
 }
 #img_plano figcaption{
@@ -159,4 +167,7 @@ body{
 }
 #panel1_logo:hover{
     cursor: pointer;
+}
+.oculto{
+    display: none;
 }

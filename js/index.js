@@ -25,16 +25,14 @@ $(function(){
 
     // eventos
 
-    span_ubicacion.hide();
-
     panel1_logo.on("click",function(){
         ocultarSecciones();
         desactivarIconos();
         panel1.removeClass("active");
-        seccion_auxiliar.removeClass("hidden");
-        seccion_imagen_fondo.removeClass("hidden");
+        seccion_auxiliar.fadeIn(2000);
+        seccion_imagen_fondo.fadeIn(2000);
     });
-    
+
     icono_ubicacion.hover(function(){
         span_ubicacion.fadeIn(200,function(){
 
@@ -56,12 +54,10 @@ $(function(){
 
     icono_imagenes.hover(function(){
         span_imagenes.fadeIn(200,function(){
-            span_imagenes.removeClass("hidden");
         });
     },function(){
         if(item_activo != "imagenes"){
             span_imagenes.fadeOut(500,function(){
-                span_imagenes.addClass("hidden");
             });
         }
     });
@@ -74,12 +70,12 @@ $(function(){
 
     icono_planos.hover(function(){
         span_planos.fadeIn(200,function(){
-            span_planos.removeClass("hidden");
+
         });
     },function(){
         if(item_activo != "planos"){
             span_planos.fadeOut(500,function(){
-                span_planos.addClass("hidden");
+
             });
         }
     });
@@ -93,35 +89,35 @@ $(function(){
     });
 
     planos.on("click",function(){
-        seccion_planos2.removeClass("hidden");
+        seccion_planos2.fadeIn(2000);
     });
 
     // funciones
 
     function ocultarSecciones(){
-        seccion_auxiliar.addClass("hidden");
-        seccion_ubicacion1.addClass("hidden");
-        seccion_ubicacion2.addClass("hidden");
-        seccion_imagenes1.addClass("hidden");
-        seccion_imagenes2.addClass("hidden");
-        seccion_planos1.addClass("hidden");
-        seccion_planos2.addClass("hidden");
-        seccion_imagen_fondo.addClass("hidden");
+        seccion_auxiliar.hide();
+        seccion_ubicacion1.hide();
+        seccion_ubicacion2.hide();
+        seccion_imagenes1.hide();
+        seccion_imagenes2.hide();
+        seccion_planos1.hide();
+        seccion_planos2.hide();
+        seccion_imagen_fondo.hide();
     }
 
     function activarSecciones(){
         ocultarSecciones();
         switch(item_activo){
             case "ubicacion":
-                seccion_ubicacion1.removeClass("hidden");
-                seccion_ubicacion2.removeClass("hidden");
+                seccion_ubicacion1.fadeIn(2000);
+                seccion_ubicacion2.fadeIn(2000);
                 break;
             case "imagenes":
-                seccion_imagenes1.removeClass("hidden");
-                seccion_imagenes2.removeClass("hidden");
+                seccion_imagenes1.fadeIn(2000);
+                seccion_imagenes2.fadeIn(2000);
                 break;
             case "planos":
-                seccion_planos1.removeClass("hidden");
+                seccion_planos1.fadeIn(2000);
                 break;
         }
     }
@@ -132,32 +128,35 @@ $(function(){
         switch(item_activo){
             case "ubicacion":
                 icono_ubicacion.addClass("active");
-                span_ubicacion.removeClass("hidden");
+                span_ubicacion.fadeIn(200);
                 break;
             case "imagenes":
                 icono_imagenes.addClass("active");
-                span_imagenes.removeClass("hidden");
+                span_imagenes.fadeIn(200);
                 break;
             case "planos":
                 icono_planos.addClass("active")
-                span_planos.removeClass("hidden");
+                span_planos.fadeIn(200);
                 break;
         }
     }
-
+    
     function desactivarIconos(){
         icono_ubicacion.removeClass("active");
         icono_imagenes.removeClass("active");
         icono_planos.removeClass("active");
 
-        span_ubicacion.addClass("hidden");
-        span_imagenes.addClass("hidden");
-        span_planos.addClass("hidden");
+        item_activo == "ubicacion " ? span_ubicacion.fadeOut(200) : span_ubicacion.fadeOut(500);
+        item_activo == "imagenes " ? span_imagenes.fadeOut(200) : span_imagenes.fadeOut(500);
+        item_activo == "planos " ? span_planos.fadeOut(200) : span_planos.fadeOut(500);
     }
 
     function activarPanel1(){
         panel1.removeClass("active");
-        panel1.addClass("active");
+        t = setTimeout(function(){
+            panel1.addClass("active");
+        },500);
+
     }
 
 });
