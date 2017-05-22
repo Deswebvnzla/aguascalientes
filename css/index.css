@@ -69,6 +69,7 @@ body{
     margin-left: 10px;
     text-shadow: 0 0 5px white;
     position: absolute;
+    margin-top: 10px;
 }
 #icono-ubicacion{
     padding: 3px 15px;
@@ -93,6 +94,7 @@ body{
 }
 #seccion_ubicacion2 footer{
     padding-left: 100px;
+    margin-bottom: 10px;
 }
 #seccion_ubicacion2_mapa{
     margin-bottom: 20px;
@@ -100,9 +102,11 @@ body{
 #seccion_ubicacion2_mapa img{
     display: inline;
     margin-right: 20px;
+    max-width: 85%;
 }
 #seccion_ubicacion2_mapa span{
-    vertical-align: bottom;
+    position: absolute;
+    bottom: 75px;
 }
 .imagenes {
     height: 70px;
@@ -150,6 +154,7 @@ body{
     background: #898989;
 }
 #seccion_planos2{
+    padding: 0;
     background: white;
 }
 #imagenes_play{
@@ -178,42 +183,87 @@ body{
     display: none;
 }
 
-   .slider {
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/*presetaciond e imagenes*/
-
-.slider ul {
-    display: flex;
-    padding: 0;
-    width: 400%;    
-    animation: slidein 15s  alternate ease-in-out;
- 
-   
-}
-
-.slider li {
-    width: 100%;
-    list-style: none;
-}
-
-.slider img {
-    width: 100%;
-}
-
 @keyframes slidein {
     0% {margin-left: 0;}
     20% {margin-left: 0;}
-    
+
     25% {margin-left: -100%;}
     45% {margin-left: -100%;}
-    
+
     50% {margin-left: -200%;}
     70% {margin-left: -200%;}
-    
+
     75% {margin-left: -300%;}
     100% {margin-left: -300%;}
+}
+
+@media (max-width: 768px){
+    #seccion_ubicacion2{
+        padding: 0;
+    }
+    #seccion_ubicacion2 > .container-fluid{
+        padding: 0 15px;
+    }
+    #seccion_ubicacion2 h3{
+        font-size: smaller;
+    }
+    #seccion_ubicacion2_mapa img{
+        max-width: 75%;
+    }
+    #seccion_ubicacion2_mapa span{
+        position: absolute;
+        bottom: 50px;
+    }
+    #seccion_ubicacion2_mapa{
+        margin-bottom: 5px;
+    }
+    #seccion_ubicacion2 span{
+        font-size: small;
+    }
+    #seccion_ubicacion2 footer {
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+} 
+
+@media (min-width: 769px) and (max-width: 992px){
+    h3 {
+        font-size: 0.92rem;
+    }
+    #seccion_ubicacion2_mapa, #seccion_ubicacion2_mapa img{
+        margin-bottom: 10px;
+    }
+    #seccion_ubicacion2 span{
+        display: block;
+        font-size: small;
+    }
+    #seccion_ubicacion2 {
+        padding: 0 10px;
+    }
+    #seccion_ubicacion2 > .container-fluid{
+        padding: 0;
+    }
+    #seccion_ubicacion2 footer {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 993px) and (max-width: 1200px){
+    h3 {
+        font-size: larger;
+    }
+    #seccion_ubicacion2_mapa img{
+        max-width: 75%;
+    }
+    #seccion_ubicacion2_mapa span{
+        position: absolute;
+        font-size: medium;
+        bottom: 50px;
+    }
+    #seccion_ubicacion2 footer {
+        padding-left: 50px;
+        font-size: medium;
+        margin-bottom: 10px;
+    }
 }
