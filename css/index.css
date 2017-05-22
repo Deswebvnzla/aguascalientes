@@ -5,6 +5,9 @@
 *{
     font-family: DINCondensedBold;
 }
+html, body, body > .container-fluid,  body > .container-fluid > .row, #seccion_panel1, #panel1, #seccion_ubicacion1{
+    height: 100%;
+}
 body{
     background: black url(/img/fondo.png) no-repeat center center fixed;
     background-size: cover;
@@ -224,7 +227,15 @@ body{
         padding-left: 20px;
         margin-bottom: 10px;
     }
-
+    #seccion_imagenes1 .logo{
+        margin-bottom: 30px;
+    }
+    #seccion_planos1 .logo{
+        margin-bottom: 41px;
+    }
+    #seccion_planos2{
+        height: 100%;
+    }
 } 
 
 @media (min-width: 769px) and (max-width: 992px){
@@ -265,5 +276,37 @@ body{
         padding-left: 50px;
         font-size: medium;
         margin-bottom: 10px;
+    }
+    #seccion_imagenes1{
+        height: 100%;
+    }
+    
+    #seccion_imagenes1 .logo{
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1201px){
+    #seccion_imagenes1{
+        height: 100%;
+    }
+    #seccion_imagenes2, #seccion_imagenes2 .container-fluid, #seccion_imagenes2 .container-fluid img{
+        height: 100%;
+    }
+    #seccion_planos1 {
+        height: 100%;
+    }
+    #seccion_planos2, #seccion_planos2 .container-fluid, #seccion_planos2 .container-fluid .row, #seccion_planos2 .container-fluid .row #img_plano{
+        height: 100%;
+    }
+    #seccion_planos2 .container-fluid .row #img_plano img{
+        height: 80%;
+    }
+    #seccion_planos2 .container-fluid .row #img_plano figcaption{
+        height: 20%;
+    }
+    #seccion_planos2 .container-fluid .row #img_plano figcaption h4{
+        height: 100%;
+        margin: 0;
+        padding: 1.14rem 0 0.912rem 0;
     }
 }
