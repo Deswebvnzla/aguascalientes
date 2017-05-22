@@ -30,16 +30,20 @@ $(function(){
     var tiempo_mostrar = 2000;
     var tiempo_inicio_anim = 1000;
     var cambio = $("#cambio");  
-    var slider = $("#slider");  
+    var slider = $("#slider"); 
+    
+    var imagenes  =$(".imagenes");
+    
       slider.hide();
 
  
 
     // eventos
+    imagenes.on("click",cambiarImagen);
+    
     imagenes_play.on("click",function(){
         cambio.hide();
         slider.show();
-     
     });
 
     panel1_logo.on("click",function(){
@@ -164,6 +168,13 @@ $(function(){
             activarSecciones();
         },1000);
 
+    }
+    
+    function cambiarImagen(){
+        var imagen = $(this).attr("imagen");
+        cambio.attr("src",imagen);
+        slider.hide();
+        cambio.show();
     }
 
 });

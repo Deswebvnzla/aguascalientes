@@ -6,7 +6,7 @@
     font-family: DINCondensedBold;
 }
 body{
-    background: black url(img/fondo.png) no-repeat center center fixed;
+    background: black url(/img/fondo.png) no-repeat center center fixed;
     background-size: cover;
     color: black;
 }
