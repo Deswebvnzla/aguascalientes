@@ -29,24 +29,26 @@ $(function(){
     var tiempo_entre_img = 1000;  
     var tiempo_mostrar = 2000;
     var tiempo_inicio_anim = 1000;
-    var cambio = $("#cambio");  
-    var slider = $("#slider"); 
-    
-    var imagenes  =$(".imagenes");
-    
-      slider.hide();
+    var cambio = $("#cambio");
 
- 
+    var imagenes  =$(".imagenes");
+    var temporizador_imagenes = 0;
+    var count_imagenes = 0; 
 
     // eventos
     imagenes.on("click",cambiarImagen);
-    
+
     imagenes_play.on("click",function(){
-        cambio.hide();
-        slider.show();
+        cambio.show();
+        clearInterval(temporizador_imagenes);
+        temporizador_imagenes = setInterval(moverImagenes,4000);
     });
 
     panel1_logo.on("click",function(){
+        clearInterval(temporizador_imagenes);
+        count_imagenes = 0;
+        var imagen = imagenes[0].attributes.imagen.value;
+        cambio.attr("src",imagen);
         ocultarSecciones();
         desactivarIconos();
         panel1.removeClass("active");
@@ -169,12 +171,20 @@ $(function(){
         },1000);
 
     }
-    
+
     function cambiarImagen(){
+        clearInterval(temporizador_imagenes);
         var imagen = $(this).attr("imagen");
         cambio.attr("src",imagen);
-        slider.hide();
         cambio.show();
+    }
+
+    function moverImagenes(){
+        cambio.hide(); 
+        var imagen = imagenes[count_imagenes].attributes.imagen.value;
+        cambio.attr("src",imagen);
+        count_imagenes = (count_imagenes + 1) % imagenes.length;  
+        cambio.fadeIn(1200);
     }
 
 });
