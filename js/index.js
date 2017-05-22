@@ -35,6 +35,9 @@ $(function(){
     var temporizador_imagenes = 0;
     var count_imagenes = 0; 
 
+    var beep = $("#beep")[0];
+    beep.volume = 0.3;
+
     // eventos
     imagenes.on("click",cambiarImagen);
 
@@ -58,7 +61,8 @@ $(function(){
 
     icono_ubicacion.hover(function(){
         span_ubicacion.fadeIn(200);
-
+        beep.pause();
+        beep.play();
     },function(){
         if(item_activo != "ubicacion"){
             span_ubicacion.hide(500);
@@ -72,6 +76,8 @@ $(function(){
 
     icono_imagenes.hover(function(){
         span_imagenes.fadeIn(200);
+        beep.pause();
+        beep.play();
     },function(){
         if(item_activo != "imagenes"){
             span_imagenes.fadeOut(500);
@@ -86,6 +92,8 @@ $(function(){
 
     icono_planos.hover(function(){
         span_planos.fadeIn(200);
+        beep.pause();
+        beep.play();
     },function(){
         if(item_activo != "planos"){
             span_planos.fadeOut(500);
