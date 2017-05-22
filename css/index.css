@@ -31,12 +31,16 @@ body{
     background: rgba(217, 217, 217, 0);
 }
 #panel1.active{
-    transition: 1s;
-    background: rgba(217, 217, 217, 0.79);
+    animation-name: example;
+    animation-duration: 0.7s;
+    transition: background-color 0.8s;
+    background-color: rgba(217, 217, 217, 0.76);
 }
-#panel1.ocultar{
-    transition: 0.5s;
-    background: rgba(217, 217, 217, 0);
+@keyframes example {
+    0% {background: rgba(217, 217, 217, 0.60);}
+    25% {background: rgba(217, 217, 217, 0);}
+    50% {background-color: rgba(92, 87, 87,0.50);}
+    100% {background-color: rgba(36, 34, 34, 0.75);}
 }
 .logo{
     margin-bottom: 60px;

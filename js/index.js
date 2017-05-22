@@ -67,7 +67,6 @@ $(function(){
     icono_ubicacion.on("click",function(){
         item_activo = "ubicacion";
         activarIconos();
-        activarSecciones();
     });
 
     icono_imagenes.hover(function(){
@@ -164,19 +163,17 @@ $(function(){
     }
 
     function activarSecciones(){
-        ocultarSecciones();
         switch(item_activo){
             case "ubicacion":
-
-                seccion_ubicacion1.fadeIn(2000);
-                seccion_ubicacion2.fadeIn(2000);
+                seccion_ubicacion1.fadeIn(1000);
+                seccion_ubicacion2.fadeIn(1000);
                 break;
             case "imagenes":
-                seccion_imagenes1.fadeIn(2000);
-                seccion_imagenes2.fadeIn(2000);
+                seccion_imagenes1.fadeIn(1000);
+                seccion_imagenes2.fadeIn(1000);
                 break;
             case "planos":
-                seccion_planos1.fadeIn(2000);
+                seccion_planos1.fadeIn(1000);
                 break;
         }
     }
@@ -211,10 +208,12 @@ $(function(){
     }
 
     function activarPanel1(){
+        ocultarSecciones();
         panel1.removeClass("active");
+        panel1.addClass("active");
         t = setTimeout(function(){
-            panel1.addClass("active");
-        },500);
+            activarSecciones();
+        },1000);
 
     }
 
