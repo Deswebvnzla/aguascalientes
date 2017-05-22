@@ -26,9 +26,9 @@ $(function(){
 
     var imagenes_play = $("#imagenes_play");
     var tiempo_ocultar = 1000;  
-    var tiempo_entre_img = 4000;  
-    var tiempo_mostrar = 3000;
-    var tiempo_inicio_anim = 4000;
+    var tiempo_entre_img = 1000;  
+    var tiempo_mostrar = 2000;
+    var tiempo_inicio_anim = 1000;
     var cambio = $("#cambio");  
     var cambio1 = $("#cambio1");  
     var cambio2 = $("#cambio2");  
@@ -144,7 +144,7 @@ $(function(){
         // Cuando pasen otros 3000 milisegundos, ocultamos la foto 3 y volvemos a iniciar la animación  
         setTimeout(function() {  
             // Ocultamos la foto 3  
-            $cambio5.fadeOut(tiempo_ocultar);  
+            cambio5.fadeOut(tiempo_ocultar);  
             // Iniciamos otra vez la animación  
             animacion();  
         }, tiempo_inicio_anim); 
