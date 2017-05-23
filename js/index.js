@@ -58,11 +58,11 @@ $(function(){
         seccion_auxiliar.fadeIn(2000);
         seccion_imagen_fondo.fadeIn(2000);
     });
-
+    
     icono_ubicacion.hover(function(){
-        span_ubicacion.fadeIn(200);
         beep.pause();
-        beep.play();
+        beep.play()
+        span_ubicacion.fadeIn(200);
     },function(){
         if(item_activo != "ubicacion"){
             span_ubicacion.hide(500);
@@ -111,9 +111,6 @@ $(function(){
     });
 
     // funciones
-
-
-
     function ocultarSecciones(){
         seccion_auxiliar.hide();
         seccion_ubicacion1.hide();
