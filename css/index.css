@@ -1,6 +1,6 @@
 @font-face {
     font-family: DINCondensedBold;
-    src: url(/font/DIN Condensed Bold.ttf);
+    src: url('/font/DIN Condensed Bold.ttf');
 }
 *{
     font-family: DINCondensedBold;
@@ -136,7 +136,6 @@ body{
     padding: 0px 50px;
     color: white;
     font-size: larger;
-}
 }#seccion_planos1{
     font-weight: bold;
     font-size: small;
