@@ -1,6 +1,6 @@
 @font-face {
     font-family: DINCondensedBold;
-    src: url('/font/DIN Condensed Bold.ttf');
+    src: url('../font/DIN Condensed Bold.ttf');
 }
 *{
     font-family: DINCondensedBold;
@@ -9,7 +9,7 @@ html, body, body > .container-fluid,  body > .container-fluid > .row, #seccion_p
     height: 100%;
 }
 body{
-    background: black url(/img/fondo.png) no-repeat center center fixed;
+    background: black url(../img/fondo.png) no-repeat center center fixed;
     background-size: cover;
     color: black;
 }
